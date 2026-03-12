@@ -49,11 +49,13 @@ const Landing = () => {
   const { data: courses, isLoading, isError } = useGetCoursesQuery({});
 
   const handleCourseClick = (courseId: string) => {
-    router.push(`search?id=${courseId}`);
+    router.push(`/search?id=${courseId}`, {
+      scroll: false,
+    });
   };
-  console.log("courses: ", courses);
 
   if (isLoading) return <LoadingSkeleton />;
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -72,10 +74,10 @@ const Landing = () => {
           <p className="landing__description">
             This is the list of the courses you can enroll in.
             <br />
-            Courses when you need them and want them
+            Courses when you need them and want them.
           </p>
           <div className="landing__cta">
-            <Link href="/search">
+            <Link href="/search" scroll={false}>
               <div className="landing__cta-button">Search for Courses</div>
             </Link>
           </div>
@@ -88,8 +90,10 @@ const Landing = () => {
               alt={`Hero Banner ${index + 1}`}
               fill
               priority={index === currentImage}
-              sizes="(max-width:768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className={`landing__hero-image ${index === currentImage ? "landing__hero-image--active" : ""}`}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className={`landing__hero-image ${
+                index === currentImage ? "landing__hero-image--active" : ""
+              }`}
             />
           ))}
         </div>
@@ -102,10 +106,10 @@ const Landing = () => {
         className="landing__featured"
       >
         <h2 className="landing__featured-title">Featured Courses</h2>
-        <p className="landing__feature-description">
+        <p className="landing__featured-description">
           From beginner to advanced, in all industries, we have the right
           courses just for you and preparing your entire journey for learning
-          and making the most
+          and making the most.
         </p>
 
         <div className="landing__tags">

@@ -3,6 +3,7 @@ import { DM_Sans, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Providers from "./providers";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -23,12 +24,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
-      <body className={`${dmSans.className}`}>
-        <Providers>
-          <div className="root-layout">{children}</div>
-        </Providers>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className={cn("font-sans", geist.variable)}>
+        <body className={`${dmSans.className}`}>
+          <Providers>
+            <div className="root-layout">{children}</div>
+          </Providers>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
