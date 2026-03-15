@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Providers from "./providers";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster } from "sonner";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
         <body className={`${dmSans.className}`}>
           <Providers>
             <div className="root-layout">{children}</div>
+            <Toaster richColors closeButton />
           </Providers>
         </body>
       </html>
