@@ -83,8 +83,33 @@ export const api = createApi({
       query: (id) => `courses/${id}`,
       providesTags: (results, error, id) => [{ type: "Courses", id }], //chỉ refetch course bị update
     }),
+
+    createStripePaymentIntent: build.mutation<
+      { clientSecret: string },
+      { amount: number }
+    >({
+      query: ({ amount }) => ({
+        url: `/transactions/stripe/payment-intent`,
+        method: "POST",
+        body: { amount },
+      }),
+      invalidatesTags: ["Users"],
+    }),
+
+    createTransaction: build.mutation<Transaction, Partial<Transaction>>({
+      query: (transaction) => ({
+        url: "transactions",
+        method: "POST",
+        body: transaction,
+      }),
+    }),
   }),
 });
 
-export const { useUpdateUserMutation, useGetCoursesQuery, useGetCourseQuery } =
-  api;
+export const {
+  useUpdateUserMutation,
+  useGetCoursesQuery,
+  useGetCourseQuery,
+  useCreateTransactionMutation,
+  useCreateStripePaymentIntentMutation,
+} = api;
