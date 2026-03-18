@@ -84,6 +84,9 @@ export const api = createApi({
       providesTags: (results, error, id) => [{ type: "Courses", id }], //chỉ refetch course bị update
     }),
 
+    getTransactions: build.query<Transaction[], string>({
+      query: (userId) => `transactions?userId=${userId}`,
+    }),
     createStripePaymentIntent: build.mutation<
       { clientSecret: string },
       { amount: number }
@@ -110,6 +113,7 @@ export const {
   useUpdateUserMutation,
   useGetCoursesQuery,
   useGetCourseQuery,
+  useGetTransactionsQuery,
   useCreateTransactionMutation,
   useCreateStripePaymentIntentMutation,
 } = api;
