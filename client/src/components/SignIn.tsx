@@ -57,5 +57,4 @@ const SignInComponent = () => {
   );
 };
 
-
 export default SignInComponent;
