@@ -38,7 +38,7 @@ const Course = () => {
       updateChapterProgress(
         currentSection.sectionId,
         currentChapter.chapterId,
-        true
+        true,
       );
     }
   };

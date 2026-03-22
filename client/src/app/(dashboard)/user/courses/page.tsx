@@ -47,7 +47,7 @@ const Courses = () => {
         `/user/courses/${course.courseId}/chapters/${firstChapter.chapterId}`,
         {
           scroll: false,
-        }
+        },
       );
     } else {
       router.push(`/user/courses/${course.courseId}`, {

@@ -41,7 +41,7 @@ const ChaptersSidebar = () => {
     setExpandedSections((prevSections) =>
       prevSections.includes(sectionTitle)
         ? prevSections.filter((title) => title !== sectionTitle)
-        : [...prevSections, sectionTitle]
+        : [...prevSections, sectionTitle],
     );
   };
 
@@ -63,7 +63,7 @@ const ChaptersSidebar = () => {
           section={section}
           index={index}
           sectionProgress={userProgress.sections.find(
-            (s) => s.sectionId === section.sectionId
+            (s) => s.sectionId === section.sectionId,
           )}
           chapterId={chapterId as string}
           courseId={courseId as string}
@@ -99,7 +99,7 @@ const Section = ({
   updateChapterProgress: (
     sectionId: string,
     chapterId: string,
-    completed: boolean
+    completed: boolean,
   ) => void;
 }) => {
   const completedChapters =
@@ -169,14 +169,14 @@ const ProgressVisuals = ({
         <div className="chapters-sidebar__progress-bars">
           {section.chapters.map((chapter: any) => {
             const isCompleted = sectionProgress?.chapters.find(
-              (c: any) => c.chapterId === chapter.chapterId
+              (c: any) => c.chapterId === chapter.chapterId,
             )?.completed;
             return (
               <div
                 key={chapter.chapterId}
                 className={cn(
                   "chapters-sidebar__progress-bar",
-                  isCompleted && "chapters-sidebar__progress-bar--completed"
+                  isCompleted && "chapters-sidebar__progress-bar--completed",
                 )}
               ></div>
             );
@@ -209,7 +209,7 @@ const ChaptersList = ({
   updateChapterProgress: (
     sectionId: string,
     chapterId: string,
-    completed: boolean
+    completed: boolean,
   ) => void;
 }) => {
   return (
@@ -251,11 +251,11 @@ const Chapter = ({
   updateChapterProgress: (
     sectionId: string,
     chapterId: string,
-    completed: boolean
+    completed: boolean,
   ) => void;
 }) => {
   const chapterProgress = sectionProgress?.chapters.find(
-    (c: any) => c.chapterId === chapter.chapterId
+    (c: any) => c.chapterId === chapter.chapterId,
   );
   const isCompleted = chapterProgress?.completed;
   const isCurrentChapter = chapterId === chapter.chapterId;
