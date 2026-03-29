@@ -99,6 +99,7 @@ const Course = () => {
           </CardContent>
         </Card>
 
+
         <div className="course__content">
           <Tabs defaultValue="Notes" className="course__tabs">
             <TabsList className="course__tabs-list">
