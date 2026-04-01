@@ -20,6 +20,7 @@ export const updateCourseVideoInfo = (
   chapter.type = "Video";
 };
 
+
 export const validateUploadedFiles = (files: any) => {
   const allowedExtensions = [".mp4", ".m3u8", ".mpd", ".ts", ".m4s"];
   for (const file of files) {
