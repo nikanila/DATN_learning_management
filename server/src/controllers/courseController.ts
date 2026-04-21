@@ -11,9 +11,13 @@ export const listCourses = async (
   res: Response,
 ): Promise<void> => {
   const { category } = req.query;
+  const { sessionClaims } = getAuth(req);
+  const userType = (sessionClaims?.metadata as { userType?: string })?.userType;
   try {
     let courses: any[] = await Course.scan().exec();
-    courses = courses.filter((course: any) => course.status === "Published");
+    if (userType !== "teacher") {
+      courses = courses.filter((course: any) => course.status === "Published");
+    }
     if (category && category !== "all") {
       courses = courses.filter((course: any) => course.category === category);
     }
