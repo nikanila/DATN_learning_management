@@ -12,10 +12,11 @@ export const listCourses = async (
 ): Promise<void> => {
   const { category } = req.query;
   try {
-    const courses =
-      category && category !== "all"
-        ? await Course.scan("category").eq(category).exec()
-        : await Course.scan().exec();
+    let courses: any[] = await Course.scan().exec();
+    courses = courses.filter((course: any) => course.status === "Published");
+    if (category && category !== "all") {
+      courses = courses.filter((course: any) => course.category === category);
+    }
     res.json({ message: "Courses retrieved successfully", data: courses });
   } catch (error) {
     res.status(500).json({ message: "Error retrieving courses", error });
@@ -182,7 +183,8 @@ export const getUploadVideoUrl = async (
     };
 
     const uploadUrl = s3.getSignedUrl("putObject", s3Params);
-    const videoUrl = `${process.env.CLOUDFRONT_DOMAIN}/videos/${uniqueId}/${fileName}`;
+    // const videoUrl = `${process.env.CLOUDFRONT_DOMAIN}/videos/${uniqueId}/${fileName}`;
+    const videoUrl = `https://${process.env.S3_BUCKET_NAME}.s3.ap-southeast-2.amazonaws.com/${s3Key}`;
 
     res.json({
       message: "Upload URL generated successfully",
