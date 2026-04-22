@@ -73,7 +73,7 @@ async function createTables() {
 async function seedData(tableName: string, filePath: string) {
   const data: { [key: string]: any }[] = JSON.parse(
     fs.readFileSync(filePath, "utf8")
-  );
+  );  
 
   const formattedTableName = pluralize.singular(
     tableName.charAt(0).toUpperCase() + tableName.slice(1)

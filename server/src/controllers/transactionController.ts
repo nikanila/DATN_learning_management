@@ -19,13 +19,34 @@ export const listTransactions = async (
   req: Request,
   res: Response,
 ): Promise<void> => {
-  const { userId } = req.query;
+  const { userId, userType } = req.query;
 
   try {
-    const transactions = userId
-      ? await Transaction.query("userId").eq(userId).exec()
-      : await Transaction.scan().exec();
+    let transactions;
 
+    if (userType === "teacher" && userId) {
+      const courses = await Course.scan("teacherId").eq(userId).exec();
+      const courseIds = courses.map((c: any) => c.courseId);
+
+      if (courseIds.length === 0) {
+        res.json({ message: "Transactions retrieved successfully", data: [] });
+        return;
+      }
+
+      const results = await Promise.all(
+        courseIds.map((courseId: string) =>
+          Transaction.query("courseId")
+            .using("CourseTransactionsIndex")
+            .eq(courseId)
+            .exec(),
+        ),
+      );
+      transactions = results.flat();
+    } else {
+      transactions = userId
+        ? await Transaction.query("userId").eq(userId).exec()
+        : await Transaction.scan().exec();
+    }
     res.json({
       message: "Transactions retrieved successfully",
       data: transactions,
