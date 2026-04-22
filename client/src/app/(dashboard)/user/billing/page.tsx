@@ -25,9 +25,10 @@ const UserBilling = () => {
   const [paymentType, setPaymentType] = useState("all");
   const { user, isLoaded } = useUser();
   const { data: transactions, isLoading: isLoadingTransactions } =
-    useGetTransactionsQuery(user?.id || "", {
-      skip: !isLoaded || !user,
-    });
+    useGetTransactionsQuery(
+      { userId: user?.id || "" },
+      { skip: !isLoaded || !user?.id },
+    );
 
   const filteredData =
     transactions?.filter((transaction) => {

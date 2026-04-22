@@ -151,8 +151,12 @@ export const api = createApi({
     TRANSACTIONS
     =============== 
     */
-    getTransactions: build.query<Transaction[], string>({
-      query: (userId) => `transactions?userId=${userId}`,
+    getTransactions: build.query<
+      Transaction[],
+      { userId: string; userType?: string }
+    >({
+      query: ({ userId, userType }) =>
+        `transactions?userId=${userId}${userType ? `&userType=${userType}` : ""}`,
     }),
     createStripePaymentIntent: build.mutation<
       { clientSecret: string },
