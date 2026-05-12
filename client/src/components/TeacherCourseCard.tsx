@@ -55,7 +55,7 @@ const TeacherCourseCard = ({
           </p>
           {course.enrollments && (
             <p className="ml-1 mt-1 inline-block text-secondary bg-secondary/10 text-sm font-normal">
-              <span className="font-bold text-white-100">
+              <span className="font-bold text-black-100">
                 {course.enrollments.length}
               </span>{" "}
               Student{course.enrollments.length > 1 ? "s" : ""} Enrolled

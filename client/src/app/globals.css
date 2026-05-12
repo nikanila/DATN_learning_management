@@ -17,7 +17,7 @@ body,
   height: 100%;
   width: 100%;
   @apply text-sm;
-  @apply text-gray-300;
+  @apply text-gray-800;
   @apply bg-customgreys-primarybg;
 }
 
@@ -38,64 +38,64 @@ input[type="color"] {
 @layer base {
   :root {
     --sidebar-background: theme("colors.customgreys.primarybg");
-    --sidebar-foreground: theme("colors.white.50");
+    --sidebar-foreground: theme("colors.gray.800");
     --sidebar-primary: theme("colors.primary.700");
-    --sidebar-primary-foreground: theme("colors.white.50");
+    --sidebar-primary-foreground: theme("colors.white.100");
     --sidebar-accent: theme("colors.customgreys.darkerGrey");
-    --sidebar-accent-foreground: theme("colors.customgreys.dirtyGrey");
-    --sidebar-border: theme("colors.customgreys.secondarybg");
+    --sidebar-accent-foreground: theme("colors.gray.600");
+    --sidebar-border: theme("colors.customgreys.darkGrey");
     --sidebar-ring: theme("colors.primary.700");
-    --popover: theme("colors.customgreys.primarybg");
-    --popover-foreground: theme("colors.white.50");
+    --popover: theme("colors.white.100");
+    --popover-foreground: theme("colors.gray.800");
 
     --background: theme("colors.customgreys.primarybg");
-    --foreground: theme("colors.white.50");
+    --foreground: theme("colors.gray.800");
 
     --primary: theme("colors.primary.700");
-    --primary-foreground: theme("colors.white.50");
+    --primary-foreground: theme("colors.white.100");
 
-    --muted: theme("colors.primary.600");
-    --muted-foreground: theme("colors.customgreys.dirtyGrey");
+    --muted: theme("colors.customgreys.darkGrey");
+    --muted-foreground: theme("colors.gray.500");
 
-    --accent: theme("colors.primary.600");
-    --accent-foreground: theme("colors.white.50");
+    --accent: theme("colors.customgreys.darkGrey");
+    --accent-foreground: theme("colors.gray.800");
 
-    --border: theme("colors.customgreys.secondarybg");
+    --border: theme("colors.customgreys.darkGrey");
     --ring: theme("colors.primary.700");
 
-    --card: theme("colors.customgreys.primarybg");
-    --card-foreground: theme("colors.white.50");
+    --card: theme("colors.white.100");
+    --card-foreground: theme("colors.gray.800");
   }
 
   .dark {
     --sidebar-background: theme("colors.customgreys.primarybg");
-    --sidebar-foreground: theme("colors.white.50");
+    --sidebar-foreground: theme("colors.gray.800");
     --sidebar-primary: theme("colors.primary.700");
-    --sidebar-primary-foreground: theme("colors.white.50");
+    --sidebar-primary-foreground: theme("colors.white.100");
     --sidebar-accent: theme("colors.customgreys.darkerGrey");
-    --sidebar-accent-foreground: theme("colors.customgreys.dirtyGrey");
-    --sidebar-border: theme("colors.customgreys.secondarybg");
+    --sidebar-accent-foreground: theme("colors.gray.600");
+    --sidebar-border: theme("colors.customgreys.darkGrey");
     --sidebar-ring: theme("colors.primary.700");
-    --popover: theme("colors.customgreys.primarybg");
-    --popover-foreground: theme("colors.white.50");
+    --popover: theme("colors.white.100");
+    --popover-foreground: theme("colors.gray.800");
 
     --background: theme("colors.customgreys.primarybg");
-    --foreground: theme("colors.white.50");
+    --foreground: theme("colors.gray.800");
 
     --primary: theme("colors.primary.700");
-    --primary-foreground: theme("colors.white.50");
+    --primary-foreground: theme("colors.white.100");
 
-    --muted: theme("colors.primary.600");
-    --muted-foreground: theme("colors.customgreys.dirtyGrey");
+    --muted: theme("colors.customgreys.darkGrey");
+    --muted-foreground: theme("colors.gray.500");
 
-    --accent: theme("colors.primary.600");
-    --accent-foreground: theme("colors.white.50");
+    --accent: theme("colors.customgreys.darkGrey");
+    --accent-foreground: theme("colors.gray.800");
 
-    --border: theme("colors.customgreys.secondarybg");
+    --border: theme("colors.customgreys.darkGrey");
     --ring: theme("colors.primary.700");
 
-    --card: theme("colors.customgreys.primarybg");
-    --card-foreground: theme("colors.white.50");
+    --card: theme("colors.white.100");
+    --card-foreground: theme("colors.gray.800");
   }
 }
 
@@ -105,7 +105,7 @@ input[type="color"] {
 
 /* Filepond */
 .filepond--panel-root {
-  @apply !bg-customgreys-primarybg;
+  @apply !bg-customgreys-darkGrey;
 }
 
 .filepond--drop-label.filepond--drop-label label {
@@ -113,10 +113,10 @@ input[type="color"] {
 }
 
 .filepond--drop-label {
-  @apply !text-white-50;
+  @apply !text-gray-700;
   @apply cursor-pointer;
   @apply hover:!bg-customgreys-darkerGrey;
-  @apply hover:!text-white-100;
+  @apply hover:!text-gray-900;
 }
 
 /* Component Classes */
@@ -152,15 +152,15 @@ input[type="color"] {
 }
 
 .selected-course__title {
-  @apply text-white-50 font-semibold text-3xl;
+  @apply text-gray-900 font-semibold text-3xl;
 }
 
 .selected-course__author {
-  @apply text-gray-400 text-sm pt-3;
+  @apply text-gray-500 text-sm pt-3;
 }
 
 .selected-course__enrollment-count {
-  @apply font-bold text-gray-300;
+  @apply font-bold text-gray-700;
 }
 
 .selected-course__content {
@@ -176,7 +176,7 @@ input[type="color"] {
 }
 
 .selected-course__sections-title {
-  @apply text-white-50/90 font-semibold mb-2;
+  @apply text-gray-800 font-semibold mb-2;
 }
 
 .selected-course__footer {
@@ -184,7 +184,7 @@ input[type="color"] {
 }
 
 .selected-course__price {
-  @apply text-primary-500 font-semibold text-2xl;
+  @apply text-primary-700 font-semibold text-2xl;
 }
 
 /* Checkout Pages */
@@ -235,11 +235,11 @@ input[type="color"] {
 }
 
 .landing__title {
-  @apply text-4xl font-bold mb-4;
+  @apply text-4xl font-bold mb-4 text-gray-900;
 }
 
 .landing__description {
-  @apply text-lg text-gray-400 mb-8;
+  @apply text-lg text-gray-500 mb-8;
 }
 
 .landing__cta {
@@ -247,7 +247,7 @@ input[type="color"] {
 }
 
 .landing__cta-button {
-  @apply bg-primary-700 hover:bg-primary-600 px-4 py-2 rounded-md;
+  @apply bg-primary-700 hover:bg-primary-600 px-4 py-2 rounded-md text-white-100;
 }
 
 .landing__hero-images {
@@ -267,11 +267,11 @@ input[type="color"] {
 }
 
 .landing__featured-title {
-  @apply text-2xl font-semibold mb-4;
+  @apply text-2xl font-semibold mb-4 text-gray-900;
 }
 
 .landing__featured-description {
-  @apply text-customgreys-dirtyGrey mb-8;
+  @apply text-gray-500 mb-8;
 }
 
 .landing__tags {
@@ -279,7 +279,7 @@ input[type="color"] {
 }
 
 .landing__tag {
-  @apply px-3 py-1 bg-customgreys-secondarybg rounded-full text-sm;
+  @apply px-3 py-1 bg-customgreys-secondarybg rounded-full text-sm text-gray-700 border border-customgreys-darkGrey;
 }
 
 .landing__courses {
@@ -369,11 +369,11 @@ input[type="color"] {
 }
 
 .checkout-details__title {
-  @apply text-3xl font-bold text-center mb-2;
+  @apply text-3xl font-bold text-center mb-2 text-gray-900;
 }
 
 .checkout-details__subtitle {
-  @apply mb-6 text-sm text-center text-gray-400 mx-auto;
+  @apply mb-6 text-sm text-center text-gray-500 mx-auto;
 }
 
 .checkout-details__form {
@@ -389,11 +389,11 @@ input[type="color"] {
 }
 
 .checkout-details__divider-line {
-  @apply w-full border-customgreys-dirtyGrey;
+  @apply w-full border-customgreys-darkGrey;
 }
 
 .checkout-details__divider-text {
-  @apply px-4 text-sm text-gray-400 whitespace-nowrap;
+  @apply px-4 text-sm text-gray-500 whitespace-nowrap;
 }
 
 .checkout-details__auth {
@@ -426,11 +426,11 @@ input[type="color"] {
 }
 
 .payment__title {
-  @apply text-2xl font-bold;
+  @apply text-2xl font-bold text-gray-900;
 }
 
 .payment__subtitle {
-  @apply text-sm text-gray-400;
+  @apply text-sm text-gray-500;
 }
 
 .payment__method {
@@ -438,15 +438,15 @@ input[type="color"] {
 }
 
 .payment__method-title {
-  @apply text-md;
+  @apply text-md text-gray-800;
 }
 
 .payment__card-container {
-  @apply flex flex-col border-[2px] border-white-100/5 rounded-lg;
+  @apply flex flex-col border-[2px] border-customgreys-darkGrey rounded-lg;
 }
 
 .payment__card-header {
-  @apply flex items-center gap-2 bg-white-50/5 py-2 px-2;
+  @apply flex items-center gap-2 bg-customgreys-darkGrey py-2 px-2;
 }
 
 .payment__card-element {
@@ -471,7 +471,7 @@ input[type="color"] {
 }
 
 .billing__title {
-  @apply text-2xl font-semibold;
+  @apply text-2xl font-semibold text-gray-900;
 }
 
 .billing__filters {
@@ -479,15 +479,15 @@ input[type="color"] {
 }
 
 .billing__select {
-  @apply w-[180px] border-none bg-customgreys-primarybg;
+  @apply w-[180px] border-none bg-customgreys-primarybg text-gray-800;
 }
 
 .billing__select-content {
-  @apply bg-customgreys-primarybg;
+  @apply bg-customgreys-secondarybg;
 }
 
 .billing__select-item {
-  @apply hover:!bg-white-50 hover:!text-customgreys-primarybg cursor-pointer;
+  @apply hover:!bg-customgreys-darkGrey hover:!text-gray-900 cursor-pointer;
 }
 
 .billing__grid {
@@ -495,11 +495,11 @@ input[type="color"] {
 }
 
 .billing__amount {
-  @apply font-medium;
+  @apply font-medium text-gray-800;
 }
 
 .billing__table {
-  @apply text-customgreys-dirtyGrey min-h-[200px];
+  @apply text-gray-600 min-h-[200px];
 }
 
 .billing__table-header {
@@ -507,7 +507,7 @@ input[type="color"] {
 }
 
 .billing__table-header-row {
-  @apply border-none text-white-50;
+  @apply border-none text-gray-800;
 }
 
 .billing__table-cell {
@@ -519,11 +519,11 @@ input[type="color"] {
 }
 
 .billing__table-row:hover {
-  @apply bg-customgreys-primarybg;
+  @apply bg-customgreys-darkGrey;
 }
 
 .billing__table-body {
-  @apply bg-customgreys-primarybg min-h-[200px];
+  @apply bg-customgreys-secondarybg min-h-[200px];
 }
 
 /* User Courses Page */
@@ -570,15 +570,15 @@ input[type="color"] {
 }
 
 .course__path {
-  @apply text-customgreys-dirtyGrey text-sm mb-2;
+  @apply text-gray-500 text-sm mb-2;
 }
 
 .course__current-chapter {
-  @apply text-gray-400;
+  @apply text-gray-600;
 }
 
 .course__title {
-  @apply text-2xl text-white-50 font-semibold my-4;
+  @apply text-2xl text-gray-900 font-semibold my-4;
 }
 
 .course__header {
@@ -598,7 +598,7 @@ input[type="color"] {
 }
 
 .course__instructor-name {
-  @apply text-customgreys-dirtyGrey text-sm font-[500];
+  @apply text-gray-500 text-sm font-[500];
 }
 
 .course__navigation {
@@ -606,7 +606,7 @@ input[type="color"] {
 }
 
 .course__chapter-count {
-  @apply mr-2 text-sm;
+  @apply mr-2 text-sm text-gray-700;
 }
 
 .course__nav-button {
@@ -662,7 +662,7 @@ input[type="color"] {
 }
 
 .course__instructor-card {
-  @apply w-1/3 h-min border-none bg-white-50/5 p-10 bg-customgreys-secondarybg;
+  @apply w-1/3 h-min border border-customgreys-darkGrey p-10 bg-customgreys-secondarybg rounded-lg;
 }
 
 .course__instructor-info {
@@ -686,29 +686,29 @@ input[type="color"] {
 }
 
 .course__instructor-name {
-  @apply text-lg font-medium;
+  @apply text-lg font-medium text-gray-900;
 }
 
 .course__instructor-title {
-  @apply text-sm;
+  @apply text-sm text-gray-500;
 }
 
 .course__instructor-bio {
-  @apply text-sm;
+  @apply text-sm text-gray-600;
 }
 
 /* Chapters Sidebar */
 .chapters-sidebar {
-  @apply bg-customgreys-secondarybg border-x border-gray-700 overflow-y-auto transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-left flex-shrink-0;
+  @apply bg-customgreys-secondarybg border-x border-customgreys-darkGrey overflow-y-auto transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-left flex-shrink-0;
   height: 100vh;
 }
 
 .chapters-sidebar__title {
-  @apply text-lg font-bold pt-9 pb-6 px-8;
+  @apply text-lg font-bold pt-9 pb-6 px-8 text-gray-900;
 }
 
 .chapters-sidebar__divider {
-  @apply border-gray-700;
+  @apply border-customgreys-darkGrey;
 }
 
 .chapters-sidebar__section {
@@ -716,7 +716,7 @@ input[type="color"] {
 }
 
 .chapters-sidebar__section-header {
-  @apply cursor-pointer px-8 py-6 hover:bg-gray-700/50;
+  @apply cursor-pointer px-8 py-6 hover:bg-customgreys-darkGrey;
 }
 
 .chapters-sidebar__section-title-wrapper {
@@ -728,15 +728,15 @@ input[type="color"] {
 }
 
 .chapters-sidebar__chevron {
-  @apply text-white-50/70 w-4 h-4;
+  @apply text-gray-600 w-4 h-4;
 }
 
 .chapters-sidebar__section-title {
-  @apply text-white-50/90 font-semibold;
+  @apply text-gray-800 font-semibold;
 }
 
 .chapters-sidebar__section-content {
-  @apply pt-8 pb-8 bg-customgreys-primarybg/40;
+  @apply pt-8 pb-8 bg-customgreys-primarybg/60;
 }
 
 .chapters-sidebar__progress {
@@ -748,7 +748,7 @@ input[type="color"] {
 }
 
 .chapters-sidebar__progress-bar {
-  @apply h-1 flex-grow rounded-full bg-gray-700;
+  @apply h-1 flex-grow rounded-full bg-customgreys-darkGrey;
 }
 
 .chapters-sidebar__progress-bar--completed {
@@ -760,7 +760,7 @@ input[type="color"] {
 }
 
 .chapters-sidebar__trophy-icon {
-  @apply text-customgreys-secondarybg w-4 h-4;
+  @apply text-white-100 w-4 h-4;
 }
 
 .chapters-sidebar__progress-text {
@@ -768,11 +768,11 @@ input[type="color"] {
 }
 
 .chapters-sidebar__chapter {
-  @apply flex gap-3 items-center px-7 py-4 text-gray-300 cursor-pointer hover:bg-gray-700/20;
+  @apply flex gap-3 items-center px-7 py-4 text-gray-700 cursor-pointer hover:bg-customgreys-darkGrey;
 }
 
 .chapters-sidebar__chapter--current {
-  @apply bg-gray-700/50;
+  @apply bg-customgreys-darkGrey;
 }
 
 .chapters-sidebar__chapter-check {
@@ -784,23 +784,23 @@ input[type="color"] {
 }
 
 .chapters-sidebar__chapter-number {
-  @apply border border-gray-600 rounded-full w-6 h-6 flex items-center justify-center text-xs text-gray-400;
+  @apply border border-customgreys-darkerGrey rounded-full w-6 h-6 flex items-center justify-center text-xs text-gray-500;
 }
 
 .chapters-sidebar__chapter-number--current {
-  @apply bg-secondary-700 text-gray-800;
+  @apply bg-secondary-700 text-white-100;
 }
 
 .chapters-sidebar__chapter-title {
-  @apply flex-1 text-sm text-gray-500;
+  @apply flex-1 text-sm text-gray-600;
 }
 
 .chapters-sidebar__chapter-title--completed {
-  @apply text-gray-500 line-through;
+  @apply text-gray-400 line-through;
 }
 
 .chapters-sidebar__chapter-title--current {
-  @apply text-secondary-700;
+  @apply text-secondary-700 font-medium;
 }
 
 .chapters-sidebar__text-icon {
@@ -813,7 +813,7 @@ input[type="color"] {
 }
 
 .droppable-section--even {
-  @apply bg-customgreys-dirtyGrey/30;
+  @apply bg-customgreys-darkGrey/50;
 }
 
 .droppable-section--odd {
@@ -821,7 +821,7 @@ input[type="color"] {
 }
 
 .droppable-section__header {
-  @apply flex justify-between items-center mb-2 bg-black/30 p-1 rounded;
+  @apply flex justify-between items-center mb-2 bg-customgreys-darkGrey p-1 rounded;
 }
 
 .droppable-section__title-wrapper {
@@ -837,7 +837,7 @@ input[type="color"] {
 }
 
 .droppable-section__description {
-  @apply text-sm text-customgreys-dirtyGrey ml-6;
+  @apply text-sm text-gray-500 ml-6;
 }
 
 .droppable-chapter {
@@ -845,11 +845,11 @@ input[type="color"] {
 }
 
 .droppable-chapter--even {
-  @apply bg-black/40;
+  @apply bg-customgreys-darkGrey/60;
 }
 
 .droppable-chapter--odd {
-  @apply bg-black/20;
+  @apply bg-customgreys-darkGrey/30;
 }
 
 .droppable-chapter__title {
@@ -874,7 +874,7 @@ input[type="color"] {
 }
 
 .chapter-modal__title {
-  @apply text-2xl font-bold;
+  @apply text-2xl font-bold text-gray-900;
 }
 
 .chapter-modal__close {
@@ -890,7 +890,7 @@ input[type="color"] {
 }
 
 .chapter-modal__video-label {
-  @apply text-sm font-medium;
+  @apply text-sm font-medium text-gray-700;
 }
 
 .chapter-modal__preview {
@@ -902,7 +902,7 @@ input[type="color"] {
 }
 
 .chapter-modal__toggle-label {
-  @apply text-sm font-medium;
+  @apply text-sm font-medium text-gray-700;
 }
 
 .chapter-modal__actions {
@@ -919,7 +919,7 @@ input[type="color"] {
 }
 
 .section-modal__title {
-  @apply text-2xl font-bold;
+  @apply text-2xl font-bold text-gray-900;
 }
 
 .section-modal__close {
@@ -949,28 +949,28 @@ input[type="color"] {
 
 /* Accordion Sections */
 .accordion-section {
-  @apply border-x border-b border-gray-600 overflow-hidden first:border-t first:rounded-t-lg last:rounded-b-lg;
+  @apply border-x border-b border-customgreys-darkGrey overflow-hidden first:border-t first:rounded-t-lg last:rounded-b-lg;
 }
 
 .accordion-section__trigger {
-  @apply hover:bg-gray-700/50 bg-customgreys-primarybg/50 px-4 py-3;
+  @apply hover:bg-customgreys-darkGrey bg-customgreys-primarybg px-4 py-3;
 }
 
 .accordion-section__title {
-  @apply text-gray-400 font-medium;
+  @apply text-gray-600 font-medium;
 }
 
 .accordion-section__content {
-  @apply bg-customgreys-secondarybg/50 px-4 py-4;
+  @apply bg-customgreys-secondarybg px-4 py-4;
 }
 
 .accordion-section__chapter {
-  @apply flex items-center text-gray-400/90 py-1;
+  @apply flex items-center text-gray-600 py-1;
 }
 
 /* Course Card */
 .course-card {
-  @apply flex flex-col w-full h-[340px] xl:h-[380px] border-none bg-customgreys-primarybg overflow-hidden cursor-pointer hover:bg-white-100/10 transition duration-200;
+  @apply flex flex-col w-full h-[340px] xl:h-[380px] border border-customgreys-darkGrey bg-customgreys-secondarybg overflow-hidden cursor-pointer hover:bg-customgreys-darkGrey transition duration-200 rounded-lg;
 }
 
 .course-card__header {
@@ -986,7 +986,7 @@ input[type="color"] {
 }
 
 .course-card__title {
-  @apply text-md lg:text-lg font-semibold line-clamp-2;
+  @apply text-md lg:text-lg font-semibold line-clamp-2 text-gray-900;
 }
 
 .course-card__footer {
@@ -994,16 +994,16 @@ input[type="color"] {
 }
 
 .course-card__category {
-  @apply text-sm bg-customgreys-secondarybg rounded-full px-3 py-2 text-gray-400;
+  @apply text-sm bg-customgreys-darkGrey rounded-full px-3 py-2 text-gray-600;
 }
 
 .course-card__price {
-  @apply text-primary-500 font-bold text-md;
+  @apply text-primary-700 font-bold text-md;
 }
 
 /* Course Card Search */
 .course-card-search {
-  @apply bg-customgreys-secondarybg overflow-hidden rounded-lg hover:bg-white-100/10 transition duration-200 flex flex-col cursor-pointer border-2 h-full;
+  @apply bg-customgreys-secondarybg overflow-hidden rounded-lg hover:bg-customgreys-darkGrey transition duration-200 flex flex-col cursor-pointer border-2 h-full;
 }
 
 .course-card-search--selected {
@@ -1024,7 +1024,7 @@ input[type="color"] {
 
 /* Course Card Teacher */
 .course-card-teacher {
-  @apply w-full h-[400px] p-0 bg-background border-none text-foreground bg-customgreys-primarybg overflow-hidden hover:bg-white-100/10 transition duration-200 flex flex-col;
+  @apply w-full h-[400px] p-0 bg-customgreys-secondarybg border border-customgreys-darkGrey text-foreground overflow-hidden hover:bg-customgreys-darkGrey transition duration-200 flex flex-col rounded-lg;
 }
 
 .course-card-teacher__header {
@@ -1041,24 +1041,24 @@ input[type="color"] {
 }
 
 .course-preview__container {
-  @apply w-full bg-customgreys-secondarybg py-8 px-10 flex flex-col gap-5 rounded-lg;
+  @apply w-full bg-customgreys-secondarybg py-8 px-10 flex flex-col gap-5 rounded-lg border border-customgreys-darkGrey;
 }
 
 .course-preview__image-wrapper {
-  @apply mb-2 bg-white-50;
+  @apply mb-2;
 }
 
 .course-preview__title {
-  @apply text-white-50 text-3xl font-bold mb-2;
+  @apply text-gray-900 text-3xl font-bold mb-2;
 }
 
 /* Custom Modal */
 .custom-modal__overlay {
-  @apply fixed inset-0 bg-black bg-opacity-50 z-40;
+  @apply fixed inset-0 bg-black bg-opacity-30 z-40;
 }
 
 .custom-modal__content {
-  @apply fixed inset-y-0 right-0 w-full max-w-md bg-customgreys-secondarybg shadow-lg z-50 overflow-y-auto;
+  @apply fixed inset-y-0 right-0 w-full max-w-md bg-customgreys-secondarybg shadow-lg z-50 overflow-y-auto border-l border-customgreys-darkGrey;
 }
 
 .custom-modal__inner {
@@ -1067,7 +1067,7 @@ input[type="color"] {
 
 /* Footer */
 .footer {
-  @apply bg-customgreys-secondarybg bottom-0 w-full py-8 mt-10 text-center text-sm;
+  @apply bg-customgreys-secondarybg border-t border-customgreys-darkGrey bottom-0 w-full py-8 mt-10 text-center text-sm text-gray-600;
 }
 
 .footer__links {
@@ -1075,7 +1075,7 @@ input[type="color"] {
 }
 
 .footer__link {
-  @apply text-primary-500 mx-2;
+  @apply text-primary-700 mx-2 hover:text-primary-600;
 }
 
 /* Loading */
@@ -1105,11 +1105,11 @@ input[type="color"] {
 }
 
 .navbar__search-input {
-  @apply bg-customgreys-primarybg pl-10 sm:pl-14 pr-6 sm:pr-20 py-3 sm:py-4 rounded-xl text-customgreys-dirtyGrey hover:text-white-50 hover:bg-customgreys-darkerGrey transition-all duration-300 text-sm sm:text-base;
+  @apply bg-customgreys-secondarybg border border-customgreys-darkGrey pl-10 sm:pl-14 pr-6 sm:pr-20 py-3 sm:py-4 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-customgreys-darkGrey transition-all duration-300 text-sm sm:text-base;
 }
 
 .navbar__search-icon {
-  @apply absolute left-3 sm:left-5 top-1/2 transform -translate-y-1/2 text-customgreys-dirtyGrey transition-all duration-300;
+  @apply absolute left-3 sm:left-5 top-1/2 transform -translate-y-1/2 text-gray-500 transition-all duration-300;
 }
 
 .navbar__actions {
@@ -1121,11 +1121,11 @@ input[type="color"] {
 }
 
 .navbar__dark-mode-icon {
-  @apply cursor-pointer text-customgreys-dirtyGrey w-5 h-5 sm:w-6 sm:h-6 hover:text-white-50;
+  @apply cursor-pointer text-gray-500 w-5 h-5 sm:w-6 sm:h-6 hover:text-gray-900;
 }
 
 .navbar__sidebar-trigger {
-  @apply text-customgreys-dirtyGrey hover:text-white-50 transition-colors;
+  @apply text-gray-500 hover:text-gray-900 transition-colors;
 }
 
 /* Toolbar */
@@ -1134,15 +1134,15 @@ input[type="color"] {
 }
 
 .toolbar__search {
-  @apply w-full px-5 h-12 bg-customgreys-primarybg placeholder-customgreys-dirtyGrey text-customgreys-dirtyGrey border-none rounded-md focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring;
+  @apply w-full px-5 h-12 bg-customgreys-secondarybg border border-customgreys-darkGrey placeholder-gray-400 text-gray-700 rounded-md focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring;
 }
 
 .toolbar__select {
-  @apply h-12 w-[180px] bg-customgreys-primarybg text-customgreys-dirtyGrey border-none;
+  @apply h-12 w-[180px] bg-customgreys-secondarybg text-gray-700 border border-customgreys-darkGrey rounded-md;
 }
 
 .toolbar__select-item {
-  @apply cursor-pointer hover:!bg-gray-100 hover:!text-customgreys-darkGrey;
+  @apply cursor-pointer hover:!bg-customgreys-darkGrey hover:!text-gray-900;
 }
 
 /* Wizard Stepper */
@@ -1171,7 +1171,7 @@ input[type="color"] {
 }
 
 .wizard-stepper__circle--upcoming {
-  @apply border border-customgreys-dirtyGrey text-customgreys-dirtyGrey;
+  @apply border border-customgreys-darkerGrey text-gray-500;
 }
 
 .wizard-stepper__text {
@@ -1179,11 +1179,11 @@ input[type="color"] {
 }
 
 .wizard-stepper__text--active {
-  @apply text-white-100;
+  @apply text-gray-900;
 }
 
 .wizard-stepper__text--inactive {
-  @apply text-customgreys-dirtyGrey;
+  @apply text-gray-500;
 }
 
 .wizard-stepper__line {
@@ -1195,12 +1195,12 @@ input[type="color"] {
 }
 
 .wizard-stepper__line--incomplete {
-  @apply bg-customgreys-dirtyGrey;
+  @apply bg-customgreys-darkGrey;
 }
 
 /* NonDashboard Navbar */
 .nondashboard-navbar {
-  @apply w-full flex justify-center bg-customgreys-primarybg;
+  @apply w-full flex justify-center bg-customgreys-secondarybg border-b border-customgreys-darkGrey;
 }
 
 .nondashboard-navbar__container {
@@ -1212,15 +1212,15 @@ input[type="color"] {
 }
 
 .nondashboard-navbar__brand {
-  @apply font-bold text-lg sm:text-xl hover:text-customgreys-dirtyGrey;
+  @apply font-bold text-lg sm:text-xl text-gray-900 hover:text-gray-600;
 }
 
 .nondashboard-navbar__search-input {
-  @apply bg-customgreys-secondarybg pl-10 sm:pl-14 pr-6 sm:pr-20 py-3 sm:py-4 rounded-xl text-customgreys-dirtyGrey hover:text-white-50 hover:bg-customgreys-darkerGrey transition-all duration-300 text-sm sm:text-base;
+  @apply bg-customgreys-primarybg border border-customgreys-darkGrey pl-10 sm:pl-14 pr-6 sm:pr-20 py-3 sm:py-4 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-customgreys-darkGrey transition-all duration-300 text-sm sm:text-base;
 }
 
 .nondashboard-navbar__search-icon {
-  @apply absolute left-3 sm:left-5 top-1/2 transform -translate-y-1/2 text-customgreys-dirtyGrey transition-all duration-300;
+  @apply absolute left-3 sm:left-5 top-1/2 transform -translate-y-1/2 text-gray-500 transition-all duration-300;
 }
 
 .nondashboard-navbar__actions {
@@ -1228,7 +1228,7 @@ input[type="color"] {
 }
 
 .nondashboard-navbar__notification-button {
-  @apply relative w-7 h-7 sm:w-8 sm:h-8 bg-gray-800 rounded-full flex items-center justify-center;
+  @apply relative w-7 h-7 sm:w-8 sm:h-8 bg-customgreys-darkGrey rounded-full flex items-center justify-center;
 }
 
 .nondashboard-navbar__notification-indicator {
@@ -1236,26 +1236,26 @@ input[type="color"] {
 }
 
 .nondashboard-navbar__notification-icon {
-  @apply text-gray-400 w-4 h-4 sm:w-5 sm:h-5;
+  @apply text-gray-600 w-4 h-4 sm:w-5 sm:h-5;
 }
 
 .nondashboard-navbar__auth-button--login {
-  @apply text-customgreys-dirtyGrey hover:bg-customgreys-darkerGrey hover:text-white-50 px-3 sm:px-4 py-1.5 sm:py-2 rounded-md border-customgreys-dirtyGrey border-[1px] text-sm sm:text-base;
+  @apply text-gray-600 hover:bg-customgreys-darkGrey hover:text-gray-900 px-3 sm:px-4 py-1.5 sm:py-2 rounded-md border-customgreys-darkerGrey border-[1px] text-sm sm:text-base;
 }
 
 .nondashboard-navbar__auth-button--signup {
-  @apply bg-indigo-600 px-3 sm:px-4 py-1.5 sm:py-2 rounded-md hover:bg-primary-600 hover:text-customgreys-primarybg text-sm sm:text-base;
+  @apply bg-primary-700 text-white-100 px-3 sm:px-4 py-1.5 sm:py-2 rounded-md hover:bg-primary-600 text-sm sm:text-base;
 }
 
 /* Add these classes for group hover effects */
 .group:hover .dashboard-navbar__search-icon,
 .group:hover .nondashboard-navbar__search-icon {
-  @apply text-white-50;
+  @apply text-gray-900;
 }
 
 .group:hover .dashboard-navbar__search-input,
 .group:hover .nondashboard-navbar__search-input {
-  @apply bg-customgreys-darkerGrey text-white-50;
+  @apply bg-customgreys-darkGrey text-gray-900;
 }
 
 /* Shared Notification Settings */
@@ -1272,7 +1272,7 @@ input[type="color"] {
 }
 
 .notification-settings__submit {
-  @apply !mt-8 text-gray-100 bg-primary-700 hover:bg-primary-600;
+  @apply !mt-8 text-white-100 bg-primary-700 hover:bg-primary-600;
 }
 
 /* Header */
@@ -1281,7 +1281,7 @@ input[type="color"] {
 }
 
 .header__title {
-  @apply text-3xl font-bold text-white-50;
+  @apply text-3xl font-bold text-gray-900;
 }
 
 .header__subtitle {
@@ -1290,32 +1290,32 @@ input[type="color"] {
 
 /* Course Card Teacher Additional Classes */
 .course-card-teacher__content {
-  @apply w-full pb-6 pt-4 flex-grow flex flex-col justify-between text-gray-400;
+  @apply w-full pb-6 pt-4 flex-grow flex flex-col justify-between text-gray-600;
 }
 
 .course-card-teacher__title {
-  @apply text-primary-50 text-md md:text-lg line-clamp-2 overflow-hidden;
+  @apply text-gray-900 text-md md:text-lg line-clamp-2 overflow-hidden;
 }
 
 .course-card-teacher__category {
-  @apply bg-customgreys-dirtyGrey/50 px-2 py-1 mt-3 mb-3 rounded-xl w-fit text-sm;
+  @apply bg-customgreys-darkGrey px-2 py-1 mt-3 mb-3 rounded-xl w-fit text-sm text-gray-600;
 }
 
 .course-card-teacher__edit-button {
-  @apply rounded w-full bg-primary-700 border-none hover:bg-primary-600 hover:text-customgreys-primarybg text-white-100 cursor-pointer;
+  @apply rounded w-full bg-primary-700 border-none hover:bg-primary-600 text-white-100 cursor-pointer;
 }
 
 .course-card-teacher__delete-button {
-  @apply rounded w-full bg-red-600 text-white-100 hover:bg-red-400 hover:text-customgreys-primarybg cursor-pointer;
+  @apply rounded w-full bg-red-500 text-white-100 hover:bg-red-600 cursor-pointer;
 }
 
 /* NonDashboard Navbar Additional Classes */
 .navbar__brand {
-  @apply font-bold text-lg sm:text-xl hover:text-customgreys-dirtyGrey;
+  @apply font-bold text-lg sm:text-xl text-gray-900 hover:text-gray-600;
 }
 
 .navbar__notification-button {
-  @apply relative w-7 h-7 sm:w-8 sm:h-8 bg-gray-800 rounded-full flex items-center justify-center;
+  @apply relative w-7 h-7 sm:w-8 sm:h-8 bg-customgreys-darkGrey rounded-full flex items-center justify-center;
 }
 
 .navbar__notification-indicator {
@@ -1323,16 +1323,16 @@ input[type="color"] {
 }
 
 .navbar__notification-icon {
-  @apply text-gray-400 w-4 h-4 sm:w-5 sm:h-5;
+  @apply text-gray-600 w-4 h-4 sm:w-5 sm:h-5;
 }
 
 .navbar__search-icon {
-  @apply absolute left-3 sm:left-5 top-1/2 transform -translate-y-1/2 text-customgreys-dirtyGrey transition-all duration-300;
+  @apply absolute left-3 sm:left-5 top-1/2 transform -translate-y-1/2 text-gray-500 transition-all duration-300;
 }
 
 /* Dark Mode Button */
 .dark-mode-button {
-  @apply cursor-pointer text-customgreys-dirtyGrey w-5 h-5 sm:w-6 sm:h-6 hover:text-white-50;
+  @apply cursor-pointer text-gray-500 w-5 h-5 sm:w-6 sm:h-6 hover:text-gray-900;
 }
 
 /* Course Card Search Additional Classes */
@@ -1341,15 +1341,15 @@ input[type="color"] {
 }
 
 .course-card-search__title {
-  @apply font-semibold line-clamp-1;
+  @apply font-semibold line-clamp-1 text-gray-900;
 }
 
 .course-card-search__description {
-  @apply text-sm mt-1 line-clamp-2;
+  @apply text-sm mt-1 line-clamp-2 text-gray-600;
 }
 
 .course-card-search__teacher {
-  @apply text-customgreys-dirtyGrey text-sm;
+  @apply text-gray-500 text-sm;
 }
 
 .course-card-search__footer {
@@ -1357,16 +1357,16 @@ input[type="color"] {
 }
 
 .course-card-search__price {
-  @apply text-primary-500 font-semibold;
+  @apply text-primary-700 font-semibold;
 }
 
 .course-card-search__enrollment {
-  @apply text-customgreys-dirtyGrey text-sm;
+  @apply text-gray-500 text-sm;
 }
 
 /* Additional Navbar Classes */
 .navbar__sidebar-trigger {
-  @apply text-customgreys-dirtyGrey hover:text-white-50 transition-colors;
+  @apply text-gray-500 hover:text-gray-900 transition-colors;
 }
 
 /* Add Chapter Button */
@@ -1400,11 +1400,11 @@ input[type="color"] {
 }
 
 .app-sidebar__title {
-  @apply text-lg font-extrabold group-data-[collapsible=icon]:hidden;
+  @apply text-lg font-extrabold text-gray-900 group-data-[collapsible=icon]:hidden;
 }
 
 .app-sidebar__collapse-icon {
-  @apply text-gray-400 w-5 h-5 group-data-[collapsible=icon]:hidden;
+  @apply text-gray-500 w-5 h-5 group-data-[collapsible=icon]:hidden;
 }
 
 .app-sidebar__nav-menu {
@@ -1412,11 +1412,11 @@ input[type="color"] {
 }
 
 .app-sidebar__nav-item {
-  @apply group-data-[collapsible=icon]:flex group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:py-4 hover:bg-customgreys-secondarybg;
+  @apply group-data-[collapsible=icon]:flex group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:py-4 hover:bg-customgreys-darkGrey;
 }
 
 .app-sidebar__nav-button {
-  @apply gap-4 p-8 hover:bg-customgreys-secondarybg group-data-[collapsible=icon]:flex group-data-[collapsible=icon]:justify-center;
+  @apply gap-4 p-8 hover:bg-customgreys-darkGrey group-data-[collapsible=icon]:flex group-data-[collapsible=icon]:justify-center;
 }
 
 .app-sidebar__nav-link {
@@ -1424,7 +1424,7 @@ input[type="color"] {
 }
 
 .app-sidebar__nav-text {
-  @apply font-medium text-md ml-4 group-data-[collapsible=icon]:hidden;
+  @apply font-medium text-md ml-4 text-gray-700 group-data-[collapsible=icon]:hidden;
 }
 
 .app-sidebar__active-indicator {
@@ -1475,17 +1475,17 @@ input[type="color"] {
 
 /* Add these classes for group hover effects */
 .group:hover .navbar__search-icon {
-  @apply text-white-50;
+  @apply text-gray-900;
 }
 
 .group:hover .navbar__search-input {
-  @apply bg-customgreys-darkerGrey text-white-50;
+  @apply bg-customgreys-darkGrey text-gray-900;
 }
 
 /* Add these classes for group hover effects */
 .group:hover .add-chapter-button__icon,
 .group:hover .add-chapter-button__text {
-  @apply text-white-100;
+  @apply text-primary-800;
 }
 
 /* Add this class for group hover effect */
@@ -1507,11 +1507,11 @@ input[type="color"] {
 }
 
 .dashboard-navbar__search-input {
-  @apply bg-customgreys-primarybg pl-10 sm:pl-14 pr-6 sm:pr-20 py-3 sm:py-4 rounded-xl text-customgreys-dirtyGrey hover:text-white-50 hover:bg-customgreys-darkerGrey transition-all duration-300 text-sm sm:text-base;
+  @apply bg-customgreys-secondarybg border border-customgreys-darkGrey pl-10 sm:pl-14 pr-6 sm:pr-20 py-3 sm:py-4 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-customgreys-darkGrey transition-all duration-300 text-sm sm:text-base;
 }
 
 .dashboard-navbar__search-icon {
-  @apply absolute left-3 sm:left-5 top-1/2 transform -translate-y-1/2 text-customgreys-dirtyGrey transition-all duration-300;
+  @apply absolute left-3 sm:left-5 top-1/2 transform -translate-y-1/2 text-gray-500 transition-all duration-300;
 }
 
 .dashboard-navbar__actions {
@@ -1523,9 +1523,9 @@ input[type="color"] {
 }
 
 .dashboard-navbar__dark-mode-icon {
-  @apply cursor-pointer text-customgreys-dirtyGrey w-5 h-5 sm:w-6 sm:h-6 hover:text-white-50;
+  @apply cursor-pointer text-gray-500 w-5 h-5 sm:w-6 sm:h-6 hover:text-gray-900;
 }
 
 .dashboard-navbar__sidebar-trigger {
-  @apply text-customgreys-dirtyGrey hover:text-white-50 transition-colors;
+  @apply text-gray-500 hover:text-gray-900 transition-colors;
 }

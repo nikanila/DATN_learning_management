@@ -11,8 +11,8 @@ import { formatPrice } from "@/lib/utils";
 
 const CourseCard = ({ course, onGoToCourse }: CourseCardProps) => {
   return (
-    <Card className="course-card group" onClick={() => onGoToCourse(course)}>
-      <CardHeader className="course-card__header">
+    <Card className="course-card group" onClick={() => onGoToCourse(course)} style={{ padding: 0, gap: 0 }}>
+      <CardHeader className="course-card__header" style={{ padding: 0 }}>
         <Image
           src={course.image || "/placeholder.png"}
           alt={course.title}

@@ -52,12 +52,19 @@ const config = {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // customgreys: {
+        //   primarybg: "#1B1C22",
+        //   secondarybg: "#25262F",
+        //   darkGrey: "#17181D",
+        //   darkerGrey: "#3d3d3d",
+        //   dirtyGrey: "#6e6e6e",
+        // },
         customgreys: {
-          primarybg: "#1B1C22",
-          secondarybg: "#25262F",
-          darkGrey: "#17181D",
-          darkerGrey: "#3d3d3d",
-          dirtyGrey: "#6e6e6e",
+          primarybg: "#F5F5F7", // xám Apple — background chính
+          secondarybg: "#FFFFFF", // trắng — card, panel
+          darkGrey: "#E8E8ED", // border, divider
+          darkerGrey: "#C7C7CC", // placeholder
+          dirtyGrey: "#8E8E93", // text phụ
         },
         primary: {
           "50": "#fdfdff",
