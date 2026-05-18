@@ -8,6 +8,7 @@ import { useUser } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ChaptersSidebar from "./user/courses/[courseId]/ChaptersSidebar";
+import ChatbotBubble from "@/components/ChatbotBubble";
 
 export default function DashboardLayout({
   children,
@@ -51,6 +52,17 @@ export default function DashboardLayout({
           </div>
         </div>
       </div>
+      <ChatbotBubble
+        user={
+          user
+            ? {
+                name: user.fullName ?? user.username ?? "",
+                email: user.emailAddresses[0]?.emailAddress ?? "",
+                userType: user.publicMetadata?.userType as "student" | "teacher",
+              }
+            : null
+        }
+      />
     </SidebarProvider>
   );
 }

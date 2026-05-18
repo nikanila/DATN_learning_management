@@ -18,15 +18,15 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
 const appearance: Appearance = {
   theme: "stripe",
   variables: {
-    colorPrimary: "#0570de",
-    colorBackground: "#18181b",
-    colorText: "#d2d2d2",
-    colorDanger: "#df1b41",
-    colorTextPlaceholder: "#6e6e6e",
+    colorPrimary: "#6366f1", // indigo đẹp
+    colorBackground: "#ffffff",
+    colorText: "#111827",
+    colorDanger: "#ef4444",
+    colorTextPlaceholder: "#9ca3af",
     fontFamily: "Inter, system-ui, sans-serif",
-    spacingUnit: "3px",
-    borderRadius: "10px",
-    fontSizeBase: "14px",
+    spacingUnit: "4px",
+    borderRadius: "12px",
+    fontSizeBase: "15px",
   },
 };
 

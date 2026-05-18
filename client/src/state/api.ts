@@ -234,6 +234,30 @@ export const api = createApi({
         }
       },
     }),
+    sendChatMessage: build.mutation<
+      { role: "assistant"; content: string },
+      {
+        messages: { role: "user" | "assistant"; content: string }[];
+        user?: {
+          name: string;
+          email: string;
+          userType?: "student" | "teacher";
+          enrolledCourses?: string[];
+        } | null;
+        courseContext?: {
+          title: string;
+          currentChapter: string;
+          currentLesson: string;
+          progress: number;
+        } | null;
+      }
+    >({
+      query: (body) => ({
+        url: "chat",
+        method: "POST",
+        body,
+      }),
+    }),
   }),
 });
 
@@ -251,4 +275,5 @@ export const {
   useGetUserEnrolledCoursesQuery,
   useGetUserCourseProgressQuery,
   useUpdateUserCourseProgressMutation,
+  useSendChatMessageMutation,
 } = api;

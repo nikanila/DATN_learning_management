@@ -60,7 +60,10 @@ const CheckoutDetailsPage = () => {
                   labelClassName="font-normal text-white-50"
                   inputClassName="py-3"
                 />
-                <Button type="submit" className="checkout-details__submit">
+                <Button
+                  type="submit"
+                  className="checkout-details__submit hover:!bg-primary-600"
+                >
                   Continue as Guest
                 </Button>
               </form>

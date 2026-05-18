@@ -93,7 +93,7 @@ const AppSidebar = () => {
                 key={link.href}
                 className={cn(
                   "app-sidebar__nav-item",
-                  isActive && "bg-gray-800",
+                  isActive && "bg-gray-200",
                 )}
               >
                 <SidebarMenuButton
@@ -101,7 +101,7 @@ const AppSidebar = () => {
                   size="lg"
                   className={cn(
                     "app-sidebar__nav-button",
-                    !isActive && "text-customgreys-dirtyGrey",
+                    !isActive && "text-gray-200",
                   )}
                 >
                   <Link
@@ -110,12 +110,12 @@ const AppSidebar = () => {
                     scroll={false}
                   >
                     <link.icon
-                      className={isActive ? "text-white-50" : "text-gray-500"}
+                      className="text-black"
                     />
                     <span
                       className={cn(
                         "app-sidebar__nav-text",
-                        isActive ? "text-white-50" : "text-gray-500",
+                        isActive ? "text-white" : "text-gray-200",
                       )}
                     >
                       {link.label}
